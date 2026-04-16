@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC Executive Academy — Minnie Mentor × Istok Pavlovic</title>
+<meta name="description" content="4 months. 6 modules. Your phone is your studio. Learn UGC creation from two mentors who built 3,000+ students and a $165M exit.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#1a1410;--bg-2:#241c16;--surface:#2e241c;--line:rgba(212,176,120,.2);--text:#faf4ea;--muted:#b5a590;--accent:#d4b078;--accent-2:#e8cc9a;--glow:#f4e0b4}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(212,176,120,.02) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-30%;left:-10%;width:70%;height:80%;background:radial-gradient(circle,rgba(212,176,120,.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:28px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(26,20,16,.94);backdrop-filter:blur(14px);z-index:100}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase}
+.logo span{color:var(--accent-2)}
+.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#1a1410;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
+section{padding:100px 0}
+.eyebrow{display:inline-block;padding:6px 14px;background:rgba(212,176,120,.08);border:1px solid rgba(212,176,120,.3);border-radius:20px;font-size:12px;font-weight:600;color:var(--accent-2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px}
+h1{font-size:clamp(42px,6vw,74px);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+h3{font-size:22px;font-weight:600;margin-bottom:14px}
+p{color:var(--muted);font-size:17px;max-width:680px}
+.hero{padding-top:80px;text-align:center}
+.hero p{font-size:20px;margin:0 auto 40px;max-width:720px}
+.cta-primary{display:inline-block;padding:18px 38px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#1a1410;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 10px 40px rgba(212,176,120,.3);transition:.2s}
+.cta-primary:hover{transform:translateY(-2px)}
+.cred-banner{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;padding:12px 24px;background:rgba(212,176,120,.08);border:1px solid rgba(212,176,120,.3);border-radius:999px;font-size:13px;color:var(--accent-2);font-weight:600;margin-bottom:24px;letter-spacing:.05em}
+.cred-banner span{opacity:.4}
+.vsl-box{max-width:900px;margin:60px auto;aspect-ratio:16/9;background:linear-gradient(135deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative}
+.vsl-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(212,176,120,.08) 0%,transparent 60%)}
+.play-btn{width:88px;height:88px;border-radius:50%;background:rgba(212,176,120,.15);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;z-index:1}
+.play-btn svg{width:32px;height:32px;fill:var(--accent-2);margin-left:4px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin:80px 0 0;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat-num{font-size:40px;font-weight:800;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.03em}
+.stat-label{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:6px}
+.problem-grid,.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+.card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:16px;transition:.3s}
+.card:hover{border-color:rgba(212,176,120,.4);transform:translateY(-4px)}
+.card-num{font-size:14px;color:var(--accent-2);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+.card h3{color:var(--text)}
+.card p{font-size:15px}
+.divider{height:1px;background:linear-gradient(90deg,transparent 0%,var(--line) 50%,transparent 100%)}
+.lead-capture{background:linear-gradient(135deg,rgba(212,176,120,.08) 0%,rgba(232,204,154,.03) 100%);border:1px solid rgba(212,176,120,.2);border-radius:24px;padding:70px 60px;text-align:center;margin:80px 0}
+.lead-capture h2{max-width:640px;margin:0 auto 20px}
+.form-row{display:flex;gap:12px;max-width:520px;margin:36px auto 0}
+.form-row input{flex:1;padding:18px 22px;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--text);font-size:15px;font-family:inherit}
+.form-row input:focus{outline:none;border-color:var(--accent)}
+.form-row button{padding:18px 32px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#1a1410;border:none;border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+.offer-box{background:linear-gradient(135deg,#241c16 0%,#2e241c 100%);border:1px solid rgba(212,176,120,.25);border-radius:24px;padding:60px;margin-top:40px}
+.offer-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.offer-price{font-size:46px;font-weight:800;background:linear-gradient(135deg,var(--accent) 0%,var(--glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.03em;line-height:1.1}
+.offer-price small{font-size:16px;color:var(--muted);font-weight:500;-webkit-text-fill-color:var(--muted);display:block;margin-top:8px}
+.feature-list{list-style:none;margin-top:24px}
+.feature-list li{padding:12px 0;color:var(--text);display:flex;align-items:flex-start;gap:12px;font-size:15px}
+.feature-list li::before{content:'✓';color:var(--accent-2);font-weight:700;flex-shrink:0}
+.mentor-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px}
+.mentor-card{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:16px;padding:40px;text-align:center}
+.mentor-img{width:120px;height:120px;border-radius:50%;background:rgba(212,176,120,.1);border:2px solid var(--line);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+.guarantee-box{background:rgba(212,176,120,.06);border:1px solid rgba(212,176,120,.2);border-radius:16px;padding:40px;text-align:center;margin:60px 0}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:18px;color:var(--text)}
+.faq-plus{width:24px;height:24px;position:relative;flex-shrink:0}
+.faq-plus::before,.faq-plus::after{content:'';position:absolute;background:var(--accent-2);top:50%;left:50%;transition:.3s}
+.faq-plus::before{width:14px;height:2px;transform:translate(-50%,-50%)}
+.faq-plus::after{width:2px;height:14px;transform:translate(-50%,-50%)}
+.faq-item.open .faq-plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:.3s}
+.faq-item.open .faq-a{max-height:320px;padding-top:14px}
+.footer{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:14px}
+@media(max-width:768px){.problem-grid,.pillar-grid,.stats,.mentor-grid{grid-template-columns:1fr}.offer-grid{grid-template-columns:1fr}.lead-capture,.offer-box{padding:40px 24px}.form-row{flex-direction:column}section{padding:70px 0}.stats{gap:20px}}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style></head><body>
+<nav><div class="container nav-inner"><div class="logo">UGC <span>EXECUTIVE</span> ACADEMY</div><a href="#apply" class="nav-cta">Prijavi se</a></div></nav>
+<section class="hero"><div class="container">
+<div class="cred-banner reveal">MINNIE MENTOR<span>×</span>ISTOK PAVLOVIC<span>•</span>3,000+ STUDENATA<span>•</span>$165M EXIT</div>
+<h1 class="reveal">Tvoj Telefon Je<br><em>Tvoj Studio</em></h1>
+<p class="reveal">UGC Executive Academy te uci kako da pravis sadrzaj koji brendovi placaju. 4 mjeseca. 6 modula. Garancija zadovoljstva. Jedina oprema koja ti treba je telefon u dzepu.</p>
+<div class="vsl-box reveal"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+<a href="#apply" class="cta-primary reveal">Prijavi Se Za Prvu Generaciju →</a>
+<div class="stats reveal">
+<div><div class="stat-num">3,000+</div><div class="stat-label">Studenata</div></div>
+<div><div class="stat-num">$165M</div><div class="stat-label">Istok Exit</div></div>
+<div><div class="stat-num">4 mj</div><div class="stat-label">Program</div></div>
+<div><div class="stat-num">100%</div><div class="stat-label">Garancija</div></div>
+</div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container">
+<div class="eyebrow reveal">PROBLEM</div>
+<h2 class="reveal">Zasto Vecina UGC Kreatora<br>Nikad Ne Dobije Prvi Brend Dil</h2>
+<div class="problem-grid">
+<div class="card reveal"><div class="card-num">RAZLOG 01</div><h3>Nema Portfolio</h3><p>Saljete DM brendovima bez portfolia. Brendovi ignorisu jer nemate sta pokazati.</p></div>
+<div class="card reveal"><div class="card-num">RAZLOG 02</div><h3>Nema Strategiju</h3><p>Snimate random sadrzaj bez plana. Nema nise, nema konzistencije, nema pricing modela.</p></div>
+<div class="card reveal"><div class="card-num">RAZLOG 03</div><h3>Nema Konekcije</h3><p>Ne znate kako doci do brendova. Cekate da vas oni pronadju. To se ne desava.</p></div>
+</div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container">
+<div class="eyebrow reveal">6 MODULA</div>
+<h2 class="reveal">Od Strategije Do Prvog Brend Dila</h2>
+<div class="pillar-grid">
+<div class="card reveal"><div class="card-num">MODUL 1-2</div><h3>Strategija + Sadrzaj</h3><p>Definisi nisu, tip sadrzaja, ciljne brendove. Nauci tehnike multiplikacije: jedan snimak, pet formata.</p></div>
+<div class="card reveal"><div class="card-num">MODUL 3-4</div><h3>Kreativni Alati + Portfolio</h3><p>Snimanje i editovanje s telefonom. Napravi portfolio koji brendovi zapravo otvaraju.</p></div>
+<div class="card reveal"><div class="card-num">MODUL 5-6</div><h3>Brend Outreach + Skaliranje</h3><p>Kako kontaktirati brendove, dogovoriti cijenu, zatvoriti prvi dil. Zatim skalirati na stalni tok projekata.</p></div>
+</div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container">
+<div class="eyebrow reveal">MENTORI</div>
+<h2 class="reveal">Dva Mentora, Jedna Akademija</h2>
+<div class="mentor-grid">
+<div class="mentor-card reveal">
+<div class="mentor-img">[Minnie]</div>
+<h3>Minnie Mentor</h3>
+<p style="max-width:none;margin-top:12px">Kreativni mozak. Izgradila TikTok Business Academy sa 3,000+ studenata bez jednog oglasa. Pocela prvi biznis sa 16 godina u Sarajevu. Vodi kreativne module: strategija, sadrzaj, portfolio.</p>
+</div>
+<div class="mentor-card reveal">
+<div class="mentor-img">[Istok]</div>
+<h3>Istok Pavlovic</h3>
+<p style="max-width:none;margin-top:12px">Poslovni mozak. Skalirao startup do $165M izlaza. Obucio 12,000 biznisa. Suosnivac Masterbox platforme. Vodi poslovne module: pricing, pregovaranje, skaliranje.</p>
+</div>
+</div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container">
+<div class="guarantee-box reveal">
+<div class="eyebrow">GARANCIJA</div>
+<h2>100% Satisfaction Guarantee</h2>
+<p style="margin:20px auto 0;max-width:600px;font-size:18px">Ako prodjes materijal i osjetis da se nisi pronasla u programu, dobijas novac nazad. Ne riskujes nista, a dobijas mnogo. Ne samo vjestinu, nego kompletno "kljuc u ruke" rjesenje.</p>
+</div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container">
+<div class="lead-capture reveal">
+<div class="eyebrow">EARLY BIRD</div>
+<h2>Ko Rano Rani, Ustedi Puno Money</h2>
+<p style="margin:0 auto">Ostalo je 40 mjesta po early bird cijeni. Nakon sto se popune, program ce biti mnogo skuplji.</p>
+<form class="form-row" onsubmit="event.preventDefault();alert('Provjerite inbox — detalji poslani.')">
+<input type="email" placeholder="Tvoj email" required><button type="submit">Prijavi Se →</button>
+</form>
+</div>
+</div></section>
+<div class="divider"></div>
+<section id="apply"><div class="container">
+<div class="eyebrow reveal">PROGRAM</div>
+<h2 class="reveal">UGC Executive Academy</h2>
+<div class="offer-box reveal"><div class="offer-grid">
+<div>
+<div class="offer-price">Early Bird<small>Ogranicen broj mjesta · Garancija zadovoljstva</small></div>
+<p style="margin-top:16px">4 mjeseca. 6 modula. Dva mentora. Sve sto ti treba da krenes od nule do prvog brend dila. Oprema: telefon.</p>
+<ul class="feature-list">
+<li>6 modula video lekcija (strategija do skaliranja)</li>
+<li>Creative library — gotovi kreativni predlosci</li>
+<li>UGC Library — primjeri uspjesnih UGC kampanja</li>
+<li>Creative Strategy sabloni — planiranje korak po korak</li>
+<li>Case Studies — stvarni primjeri iz prakse</li>
+<li>Pristup zatvorenoj grupi — podrska od Minnie i Istoka</li>
+<li>100% Satisfaction Guarantee</li>
+</ul>
+</div>
+<div><div style="background:rgba(212,176,120,.08);border:1px solid rgba(212,176,120,.2);border-radius:16px;padding:32px;text-align:center">
+<div class="eyebrow">40 MJESTA</div>
+<h3 style="margin-bottom:12px">Early Bird Cijena<br>Ogranicen Broj Mjesta</h3>
+<p style="margin:0 auto 24px">Prva generacija. Nakon popunjavanja, cijena raste.</p>
+<a href="#" class="cta-primary" style="width:100%">Prijavi Se Sada →</a>
+</div></div>
+</div></div>
+</div></section>
+<div class="divider"></div>
+<section><div class="container" style="max-width:820px">
+<div class="eyebrow reveal">FAQ</div>
+<h2 class="reveal">Cesta Pitanja</h2>
+<div style="margin-top:40px">
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Da li moram imati puno pratilaca?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Ne. UGC kreatori ne zavise od svoje publike. Brendovi koriste tvoj sadrzaj na SVOM profilu ili u SVOJIM oglasima. Tvoji pratioci nisu bitni, kvaliteta sadrzaja jeste.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Da li mi treba skupa oprema?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Ne. Telefon je dovoljan. Brendovi zele autentican sadrzaj koji izgleda kao da je korisnik snimio. Previse profesionalno zapravo steti. Ne trebaju ti posebne kamere, mikrofoni, ili studio.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Koliko kosta program?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Early bird cijena je dostupna za prvih 40 mjesta. Nakon toga, program ce biti skuplji. Detalji o cijeni na stranici za prijavu.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Sta ako mi se ne svidi?</span><div class="faq-plus"></div></div><div class="faq-a"><p>100% Satisfaction Guarantee. Ako prodjes materijal i osjetis da se nisi pronasla u programu, dobijas novac nazad. Bez komplikacija.</p></div></div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Ko su mentori?</span><div class="faq-plus"></div></div><div class="faq-a"><p>Minnie Mentor: 3,000+ studenata, TikTok ekspert, kreativni mozak. Istok Pavlovic: $165M startup exit, 12,000 obucenih biznisa, poslovni mozak. Zajedno pokrivaju obje strane UGC biznisa.</p></div></div>
+</div>
+</div></section>
+<section style="text-align:center"><div class="container">
+<h2 class="reveal">Spremna Za Prvu Generaciju?</h2>
+<p class="reveal" style="margin:20px auto 40px">40 early bird mjesta. Telefon u dzepu. 4 mjeseca do prvog brend dila.</p>
+<a href="#apply" class="cta-primary reveal">Prijavi Se Sada →</a>
+</div></section>
+<footer class="footer"><div class="container"><p>© 2026 UGC Executive Academy · Minnie Mentor × Istok Pavlovic</p></div></footer>
+<script>const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));</script>
+</body></html>
